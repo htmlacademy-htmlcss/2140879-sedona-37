@@ -13,6 +13,89 @@
   src: url("../fonts/ptsans-700.woff2") format("woff2");
   font-display: swap;
 }
-body{
-  color: brown;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+html {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  font-family: "PT Sans", sans-serif;
+  font-size: 22px;
+  line-height: 26px;
+  color: #333333;
+  background-color: #f2f2f2;
+}
+.body-wrapper{
+  display: flex;
+  max-width: 1200px;
+  background-color: #FFFFFF;
+}
+
+.header-wrapper {
+display: flex;
+padding: 0px 70px;
+max-width: 1200px;
+}
+.navigation{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 308px;
+  padding: 0px;
+  height: 64px;
+}
+.navigation-list{
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+}
+.navigation-list-item{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 470px;
+  align-content: center;
+}
+/* Welcom to Sedona */
+.presentation {
+  position: relative;
+  background-color: #82b3d3;
+  background-image: url(/images/main/index-background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 51px;
+  margin: 0 auto;
+  padding-bottom: 76px;
+}
+.presentation::before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 1200px;
+  height: 57px;
+  display: block;
+  background-image: url("../images/main/white-main-background.svg");
+  background-size: 1200px 57px;
+  content: "";
+}
+.hero{
+  display: block;
+  margin: auto;
 }
