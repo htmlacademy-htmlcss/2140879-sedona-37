@@ -374,8 +374,72 @@ flex-shrink: 0;
 }
 .subscription-button {
   font-size: 20px;
-  line-height: 36px;
+ font-family: PT Sans;
+ font-weight: 700;
+ line-height: 36px;
+ text-transform: uppercase;
   padding: 8px 50px;
   margin: 0;
   border-radius: 0 4px 4px 0;
+ align-items: center;
 }
+.email{
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 24px;
+  width: 452px;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  background-color: #f2f2f2;
+  margin: 8px;
+}
+/* Footer */
+.page-footer {
+  display: flex;
+  width: 100%;
+  padding: 31px 70px 21px;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+.footer-social {
+  width: 142px;
+  }
+
+  .footer-social-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .footer-social-link {
+    position: relative;
+    width: 47px;
+    height: 40px;
+    display: block;
+    margin-bottom: 14px;
+    padding: 3px;
+  }
+
+  .footer-social-vk::before {
+    position: absolute;
+    top: 13px;
+    left: 10px;
+    content: "";
+    width: 24px;
+    height: 14px;
+    background-color: #83b3d3;
+    background-image: url(../images/footer/vk.svg);
+    mask-repeat: no-repeat;
+  }
+  .footer-social-telegram::before {
+    position: absolute;
+    top: 13px;
+    left: 12px;
+    content: "";
+    width: 18px;
+    height: 15px;
+    background-color: #83b3d3;
+    mask-image:url(../images/footer/vk.svg) width="458" height="352";
+    mask-repeat: no-repeat;
+  }
