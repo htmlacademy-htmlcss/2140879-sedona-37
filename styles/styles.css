@@ -13,6 +13,433 @@
   src: url("../fonts/ptsans-700.woff2") format("woff2");
   font-display: swap;
 }
-body{
-  color: brown;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
+
+html {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  font-family: "PT Sans", sans-serif;
+  font-size: 22px;
+  line-height: 26px;
+  color: #333333;
+  background-color: #f2f2f2;
+}
+.body-wrapper{
+  display: flex;
+  background-color: #FFFFFF;
+  flex-grow: 1;
+  width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  text-align: center;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+.header-wrapper {
+display: flex;
+padding: 0px 70px;
+max-width: 1200px;
+}
+.button {
+  display: inline-block;
+  padding: 8px;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
+  background-color: #82b3d3;
+  border-color: #82b3d3;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.navigation{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 308px;
+  padding: 0px;
+  height: 64px;
+}
+.navigation-list{
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+}
+.navigation-list-item{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 470px;
+  align-content: center;
+}
+/* Welcom to Sedona */
+.presentation {
+  position: relative;
+  background-color: #82b3d3;
+  background-image: url(/images/main/index-background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 51px;
+  margin: 0 auto;
+  padding-bottom: 76px;
+}
+.presentation::before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 1200px;
+  height: 57px;
+  display: block;
+  background-image: url("../images/main/white-main-background.svg");
+  background-size: 1200px 57px;
+  content: "";
+}
+.hero{
+  display: block;
+  margin: auto;
+}
+/* Седона — небольшой городок в Аризоне, заслуживающий большего!
+Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон! */
+
+.advantages-page{
+  display: flex;
+width: 1200px;
+padding: 69px 0px;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 25px;
+}
+.advantages-page-title
+ {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  width: 620px;
+  margin: auto;
+  color: #000000;
+}
+.advantages-item {
+  min-height: 384px;
+  min-width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.advantages-item-photo {
+  background: #82b3d3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.advantages-list{
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.advantages-item-light-blue {
+  background: rgba(131, 179, 211, 0.12);
+}
+.advantages-item-blue{
+  background: rgba(131, 179, 211, 0.2);
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-width: 400px;
+  min-height: 385px;
+  justify-content: center;
+}
+
+.wrapper::after {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  width: 60px;
+  content: "";
+  align-self: center;
+  margin: 30px 0;
+  z-index:1;
+  position:absolute
+
+}
+.advantages-item::after {
+
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  width: 60px;
+  content: "";
+  align-self: center;
+  margin: 30px 0;
+  z-index:1;
+  position:absolute
+}
+
+.advantages-title {
+  font-size: 24px;
+  font-family: PT Sans;
+  font-weight: 700;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.advantages-description{
+  text-align: center;
+  font-size: 18px;
+  font-family: PT Sans;
+  line-height: 21px;
+  color: #333333;
+}
+
+.advantages-title-wight{
+  color: #FFFFFF;
+}
+
+.advantages-description-wight{
+  color: #FFFFFF;
+}
+/* Приезжайте в Седону отдохнуть в комфорте и уюте! */
+.services{
+  display: flex;
+  padding: 64px 0px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  align-self: stretch;
+}
+.services-page-title{
+  font-family: "PT Sans";
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  align-items: center;
+  margin: auto;
+  color: #000000;
+  text-align: center;
+  display: flex;
+width: 505px;
+flex-direction: column;
+
+}
+/* Жилье еда сувениры */
+.services-list :nth-child(3)::before {
+  background-image: url(../images/main/icon-food.svg);
+  background-repeat: no-repeat;
+  content: "";
+  width: 75px;
+  height: 72px;
+  align-self: center;
+}
+.services-list :nth-child(1)::before {
+  background-image: url(../images/main/icon-home.svg);
+  background-repeat: no-repeat;
+  content: "";
+  width: 75px;
+  height: 72px;
+  align-self: center;
+}
+
+.services-list :nth-child(2)::before {
+  background-image: url(../images/main/icon-present.svg);
+  background-repeat: no-repeat;
+  content: "";
+  width: 75px;
+  height: 72px;
+  align-self: center;
+}
+
+.services-list
+ {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.services-item {
+display: flex;
+width: 230px;
+padding: 80px 85px;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 10px;
+flex-shrink: 0;
+}
+.services-item:nth-child(odd) {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.services-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: #000000;
+  padding: 30px 0;
+  margin: 0;
+}
+
+.services-description {
+  font-size: 18px;
+  line-height: 21px;
+  margin: 0;
+}
+
+/* Жилье еда сувениры */
+.interested-title {
+  margin: 0;
+  color: #000000;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.interested-description{
+  margin: 0;
+  padding-top: 20px;
+  margin-bottom: 54px;
+}
+.search{
+  padding: 96px 304px;
+}
+.hotel-search-button{
+  background-color: #756157;
+  font-size: 20px;
+  line-height: 36px;
+  padding: 8px 50px;
+  margin: 0;
+  border-radius: 0 4px 4px 0;
+}
+
+
+/* Подпишитесь на рассылку */
+.subscription {
+  padding: 96px 70px 104px 70px;
+  background-color: #82b3d3;
+  background-image: url("../images/catalog/main/blur-background.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.subscription-title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.subscription-description {
+  color: #ffffff;
+  margin:0;
+  padding: 20px 70px 0;
+  margin-bottom:  54px;
+}
+
+.subscription-form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.subscription-button {
+  font-size: 20px;
+ font-family: PT Sans;
+ font-weight: 700;
+ line-height: 36px;
+ text-transform: uppercase;
+  padding: 8px 50px;
+  margin: 0;
+  border-radius: 0 4px 4px 0;
+ align-items: center;
+}
+.email{
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 24px;
+  width: 452px;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  background-color: #f2f2f2;
+  margin: 8px;
+}
+/* Footer */
+.page-footer {
+  display: flex;
+  width: 100%;
+  padding: 31px 70px 21px;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+.footer-social {
+  width: 142px;
+  }
+
+  .footer-social-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .footer-social-link {
+    position: relative;
+    width: 47px;
+    height: 40px;
+    display: block;
+    margin-bottom: 14px;
+    padding: 3px;
+  }
+
+  .footer-social-vk::before {
+    position: absolute;
+    top: 13px;
+    left: 10px;
+    content: "";
+    width: 24px;
+    height: 14px;
+    background-color: #83b3d3;
+    background-image: url(../images/footer/vk.svg);
+    mask-repeat: no-repeat;
+  }
+  .footer-social-telegram::before {
+    position: absolute;
+    top: 13px;
+    left: 12px;
+    content: "";
+    width: 18px;
+    height: 15px;
+    background-color: #83b3d3;
+    mask-image:url(../images/footer/vk.svg) width="458" height="352";
+    mask-repeat: no-repeat;
+  }
